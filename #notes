@@ -1,0 +1,35 @@
+# notes
+
+##tools
+
+
+
+markdown, is a language similar to html, it is used to describe the structure of a document , the advantage is its syntax
+
+prompt, the test before the cursor on a terminal
+
+## Terminal Commands
+
+pwd. Print Working Directory
+cd. change directory
+whoami. tells you the current user name youre using
+
+
+repertoire -> the set of numeric representations of characters
+glyph. its the visual representation of a character
+character set. its the numeric range used to represent characters (called code points)
+
+ASCII ->
+ 0 or 1 -> groups of 8 -> bytes
+
+ UNICODE
+
+ #GIT
+
+ vcs. versioning control system
+
+ snapshot --> Commits
+ git needs to know your name and email, the date, message, identifier (hash)
+ repository -> folder, your code + git information (history of your code)
+
+ Github:
