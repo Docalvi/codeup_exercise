@@ -1,0 +1,43 @@
+div {
+    border-width: 1px;
+    border-color: aquamarine;
+    border-style: groove;
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+#red {
+    background-color: red;
+
+}
+
+#orange {
+    background-color: orange;
+    margin-left: 30px;
+}
+
+#yellow {
+    background-color: yellow;
+    margin-left: 60px;
+}
+
+
+#green {
+    background-color: green;
+    margin-left: 90px;
+}
+
+#blue {
+    background-color: blue;
+    margin-left: 120px;
+}
+
+
+#purple {
+    background-color: purple;
+    margin-left: 150px;
+}
