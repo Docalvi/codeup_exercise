@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My First HTML Home</title>
+    </head>
+    <body>
+        <h2>User Login</h2>
+            <form method="POST" action="http://requestb.in/1bnkcwr1">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" placeholder="Enter Username Here">
+                    <br>
+                    <label for="password">Password</label>
+                    <input id="password" name="password" type="password" placeholder="Enter Password Here">
+                    <br>
+                    <button>Login</button>
+            </form>
+            <br>
+        <h2>Compose Email</h2>
+            <form method="post" action="http://requestb.in/1bnkcwr1">
+                <label for="to">To</label>
+                <input id="to" name="to" type="text">
+                <br>
+                <label for="from">from</label>
+                <input id="from" name="From" type="text">
+                <br>
+                <label for="Subject">Subject</label>
+                <input id="subject" name="subject" type="text">
+                <br>
+                <textarea name="email" id="email" cols="30" rows="10"></textarea>
+                <br>
+                <label for="save">Save Draft</label>
+                <input id="save" name="save" type="checkbox" checked="checked">
+                <br>
+                <button>Send</button>
+            </form>
+        <h2>Multiple Choice Test</h2>
+            <form method="post" action="http://requestb.in/1bnkcwr1">
+                <p>Which of the folloing are on the Avengers Team?</p>
+                <label for="Captain America">
+                    <input id="Captain America" name="Captain America" type="radio">
+                    Captain America
+                </label>
+                <label for="SuperMan">
+                <input id="Superman" name="Superman" type="radio">
+                    Superman
+                </label>
+                <label>
+                <input id="Iron Man" name="Iron Man" type="radio">
+                    Iron Man
+                </label>
+                <p>Which of the following were Presidents of the United States of America?</p>
+                <label for="George Washington">
+                    <input id="George Washington" name="George Washington" type="radio">
+                    George Washington
+                </label>
+                <label for="Jimmy Carter">
+                    <input id="Jimmy Carter" name="Jimmy Carter" type="radio">
+                    Jimmy Carter
+                </label>
+                <label for="Benajamin Franklin">
+                <input id="Benajamin Franklin" name="Benajamin Franklin" type="radio">
+                    Benjamin Franklin
+                </label>
+                <br>
+                <button>Send</button>
+                <p></p>
+                <p>What operating systems have you used?</p>
+                <label><input type="checkbox" id="console1" name="console[]" value="PS4"> Playstation 4</label>
+                <label><input type="checkbox" id="console2" name="console[]" value="XboxONE"> Xbox One</label>
+                <label><input type="checkbox" id="console3" name="console[]" value="SWITCH"> Nintendo Switch</label>
+                <br>
+                <button>Send</button>
+                <br>
+                <label for="Countries">WHich of the following countries have you been to?</label>
+                <select name="countries[]" id="countries" multiple>
+                    <option value="mexico">Mexico</option>
+                    <option value="canada">Canada</option>
+                    <option value="korea">Korea</option>
+                </select>
+                <br>
+                <button>Send</button>
+            </form>
+        <h2>Select Testing</h2>
+            <form method="post" action="http://requestb.in/1bnkcwr1">
+                <label for="star_wars">Do you like Star Wars?</label>
+                <select name="star_wars" id="star_wars">
+                    <option value="Yes" selected>YES</option>
+                    <option value="no">NO</option>
+                </select>
+                <br>
+                <button>send</button>
+            </form>
+    </body>
+</html>
