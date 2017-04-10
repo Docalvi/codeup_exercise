@@ -10,19 +10,19 @@ var receipt = 60;
 
 switch (luckyNumber) {
     case 0:
-        console.log(receipt);
+        console.log(receipt,' You have to pay full price.');
         break;
     case 1:
-        console.log(receipt - (receipt * .10));
+        console.log(receipt - (receipt * .10),' You got a 10% discount');
         break;
     case 2:
-        console.log(receipt - (receipt * .25));
+        console.log(receipt - (receipt * .25),' You got a 25% discount.');
         break;
     case 3:
-        console.log(receipt - (receipt * .50));
+        console.log(receipt - (receipt * .50),' You got a 50% discount.');
         break;
     case 4:
-        console.log(receipt - (receipt * .75));
+        console.log(receipt - (receipt * .75),' You got a 75% discount.');
         break;
     case 5:
         console.log(receipt * 0,' its free');
