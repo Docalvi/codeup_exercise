@@ -3,7 +3,7 @@
  */
 var gradeAverage = (70 + 80 + 95) / 3;
 if (gradeAverage > 80) {
-    console.log('Youre awesome')
+    console.log('You\'re awesome')
 } else {
     console.log('You need more practice.')
 }
