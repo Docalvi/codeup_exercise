@@ -1,35 +1,131 @@
-# notes
+class= "top-navigation"
 
-##tools
+Components elements thar are used though out the project
+it can appear on a page more than once
+when you classify something its telling the code that not all parts of the compnent are the same
+for this reason we have different selectors most common selector is classes "class"
+ex:
+.top_navigation{
+font-weight: bold
+
+}
+when you do this the style will cascade onto everything with the anchor tag of top navigation
+
+when selecting an idea for style it must start with a # in order to properly identify what youre trying to change
+
+
+which selector is more important
+1. IDs
+2. classes
+3. elements
+
+handy tool press shift option and then click with your cursor to type in multiple places
+
+
+an element can have more than one class to do this in an html project you have to use a space in between the classes
+
+for pseudo selectors you have to use the correct order or else the the selectors will not follow the rules and your code
+will look funky
+ always remember to use "LoVe HAte"
+
+try not to use inline style when styling your project
+
+you should create another file with your style assets and link your project to that file.
+ when coding try not to repeat yourself its bad practice to have multiple repeating code
+
+ inline styles- you use the HTML attribute directly in the element
+ embedded styles- you need to create style elements in the head section of your doc
+ external stylesheet- you need to use the link element to link the current doc to the external stylesheet
+
+ css selectors
+ element we use the tag name
+ ID this one is for unique elements on a page
+ class. this one is for elements with similar visual presentation
+ these selectors have a specific priority order they must follow
+
+ pseudo classes
+ they represent state on an element. for instance the states of a link (anchor tags)
+
+
+ properties
+
+ test properties
+ font properties
+    * serif
+    *sans-serif
+    *monospace
+ background properties
+ list properties
+
+
+ box properties
+
+  everything is a box in a page
+  that defines the position  of the elements on a page
+  space, size
+    width, padding, border = all factor in the size of the element
+    total width = width + padding + padding
+    total height = height + padding + border
+
+    margin
+
+
+there is shorthand for the css
+though different it still follows the same rules
+
+
+whats a reset css file
+    UA stylesheet
+
+different types of layouts
+ fixed
+ fluid
+ responsive
+
+device independent pixels (device pixel ratio) vs hardwire pixels
+calculating css pixels
+the viewpoint
+specific resets for responsive designs
+    images
+
+(960 degrees) look up
+
+
+for web use 65% for words of page or else its hard to read for the user
+in order to to show your content properly on different platforms use the metadata viewport
+you will be using different stylesheets if you plan for your conent to be used in different platforms
+these stylesheets are called conditional stylesheet
+depending on your parameters set you can display completely different content from other stylesheets
+{if blank then blank} (CONDITIONALS)
+be weary of how many sheets you use the more stylesheets you use the longer your  page will take to load
+
+alternatively you can use a @media rule negating the use of various stylesheets
+you will still need a viewport inorder to display css properly
+
+
+command option l formats your code
+
+think of programing as an excel spreadsheet
+there is an address an identifier and a value
+remember all you need to know really the identifier and the value
+        Key value pairs
 
 
 
-markdown, is a language similar to html, it is used to describe the structure of a document , the advantage is its syntax
+variable assignment
+    variable name = <values>;
+    always finish a javascript line with a semicolon
 
-prompt, the test before the cursor on a terminal
+variable declaration
+    var = <variable name>;
 
-## Terminal Commands
+separating multiple variables with a coma
 
-pwd. Print Working Directory
-cd. change directory
-whoami. tells you the current user name youre using
+every variable in javascript has a type
+there are five types
+    boolean
+    number
+    string
+    null
+    undefind
 
-
-repertoire -> the set of numeric representations of characters
-glyph. its the visual representation of a character
-character set. its the numeric range used to represent characters (called code points)
-
-ASCII ->
- 0 or 1 -> groups of 8 -> bytes
-
- UNICODE
-
- #GIT
-
- vcs. versioning control system
-
- snapshot --> Commits
- git needs to know your name and email, the date, message, identifier (hash)
- repository -> folder, your code + git information (history of your code)
-
- Github:

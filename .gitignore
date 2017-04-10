@@ -3,3 +3,4 @@
 *.iml
 # any location
 **/.DS_Store
+example_float.html
