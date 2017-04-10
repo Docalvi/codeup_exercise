@@ -43,5 +43,5 @@ if (flipACoin == 0) {
     console.log('buy house');
 }
 
-var buyHouseOrCar = (flipACoin) ? 'buy car' : 'buy house';
+var buyHouseOrCar = (flipACoin) ? 'buy a house' : 'buy a car';
 console.log(buyHouseOrCar)
