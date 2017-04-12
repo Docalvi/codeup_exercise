@@ -2,7 +2,10 @@
 
 // TODO: Ask the user for their name.
 //       Keep asking if an empty input is provided.
-var response = prompt("What\'s your name?");
+var userName;
+do {
+    var userName = prompt('what is your username')
+} while (userName === "");
 
 
 // TODO: Show an alert message that welcomes the user based on their input.
@@ -16,4 +19,6 @@ if (pizza) {
 } else {
     alert('That\'s too bad.')
 }
+
+
 
