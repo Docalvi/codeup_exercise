@@ -56,6 +56,6 @@ function isodd(number) {
  * console.log *outside of the function* to check your work
  */
 
-console.log(random)
+console.log(random);
 isodd(random)
 })();
