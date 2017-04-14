@@ -9,6 +9,10 @@ if (gradeAverage > 80) {
 }
 
 
+
+
+
+
 var ryan = 250
 var cameron = 180
 var george = 320

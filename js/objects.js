@@ -41,18 +41,60 @@
      * Cameron bought $180, Ryan $250 and George $320. Your program will have to
      * display a line with the name of the person, the amount before the
      * discount, the discount, if any, and the amount after the discount.
-     *
-     * Uncomment the lines below to create an array of objects where each object
+     */
+
+
+    /** Uncomment the lines below to create an array of objects where each object
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+    var shoppers = [
+        {
+            name: 'Cameron',
+            amount: 180
+        },
+        {
+            name: 'Ryan',
+            amount: 250
+        },
+        {
+            name: 'George',
+            amount: 320
+        }
+    ];
 
-// log the make/model
+    shoppers.forEach(function (buyer, index) {
+        var shopDiscount = (buyer.amount) - (buyer.amount * .35);
+        console.log('-------buyer------' + (index+ 1) + '-------')
+        if (buyer.amount >= 200) {
+            console.log(buyer.name + ' original amount paid is ' + '$' + buyer.amount);
+            console.log('With the discount ' + buyer.name + ' paid ' + '$' + (buyer.amount - shopDiscount));
+        } else {
+            console.log(buyer.name + ' did not receive the discount, he paid ' + '$' +buyer.amount + ' total.')
+        }
+        console.log('-------End of buyer list.--------')
+    });
+
+
+    // todo:
+// Create an array of objects that represent books.
+// Each book should have a title and an author property.
+// The author property should be an object with a firstName and lastName.
+// Be creative and add at least 5 books to the array
+// var books = [todo];
+
+// log out the books array
+    console.log(books);
+
+// todo:
+// Loop through the array of books using .forEach and print out the specified information about each one.
+// start loop here
+    console.log("Book #" + todo);
+    console.log("Title: " + todo);
+    console.log("Author: " + todo);
+    console.log("---");
+// end loop here
+
 
 })();
