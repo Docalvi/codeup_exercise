@@ -1,6 +1,9 @@
 /**
  * Created by emilioalvarado on 4/14/17.
  */
+'use strict';
+(function () {
+
 
 /**
  * Debug Warm Up
@@ -30,7 +33,7 @@ console.log(pizza.crust);
 // everything until the next comment block              //
 //////////////////////////////////////////////////////////
 
-orders = [
+ var orders = [
     {
         toppings: ['pepperoni', 'green peppers', 'onions'],
         crust: 'stuffed',
@@ -66,12 +69,12 @@ console.log(' > Orders For Delivery');
 console.log('--------------------------------------------------');
 
 // output information about all the orders for delivery
-for (var index = 0; index <= orders.length; index += 2) {
+for (var index = 0; index < orders.length; index += 1) {
     var order = orders[index];
 
     // if an order is not for delivery, skip it
     if (!order.delivery) {
-        break;
+        continue;
     }
 
     var orderNumber = index + 1;
@@ -82,7 +85,7 @@ for (var index = 0; index <= orders.length; index += 2) {
     console.log('Toppings');
     // output all the toppings for the order
     order.toppings.forEach(function (toppings) {
-        console.log('- ' + order.toppings);
+        console.log('- ' + toppings);
     });
 
     console.log('Crust: ' + order.crust);
@@ -93,3 +96,5 @@ for (var index = 0; index <= orders.length; index += 2) {
 
     console.log('Total: ' + formattedPrice);
 }
+
+})();
