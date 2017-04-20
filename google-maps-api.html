@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        #map-canvas {
+            height: 400px;
+            width: 800px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="map-canvas"></div>
+
+<label for="lat">Lat:</label>
+<input type="text" id="lat" value="29.426791">
+
+<label for="long">long:</label>
+<input type="text" id="long" value="-98.489602">
+
+<label for="zoom">zoom:</label>
+<input type="hidden" id="zoom" value="10">
+
+<button id="in">+</button>
+<button id="out">-</button>
+
+<button id="update">Update map</button>
+
+<label for="addressFind">Address:</label>
+<input type="text" id="addressFind">
+<button id="find">Find</button>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5-ZHPbrstxQAsVZi6Smo_RoY6yfL1Pgk"></script>
+
+<script type="application/javascript">
+
+    (function () {
+        "use strict";
+
+        var updateBtn = document.getElementById("update");
+        var zoomVal = parseInt(document.getElementById("zoom").value);
+        var zoomIn = document.getElementById("in");
+        var zoomOut = document.getElementById("out");
+        var map = new google.maps.Map(document.getElementById("map-canvas"), null);
+        var lat = parseFloat(document.getElementById("lat").value);
+        var long = parseFloat(document.getElementById("long").value);
+        var findbtn = document.getElementById('find');
+        var codeup = {lat: 29.426791, lng: -98.489602};
+        var infowindow = new google.maps.InfoWindow({
+            content: "<em><b>Here I am!</b></em><br> <strong>This is Codeup</strong>"
+        });
+
+
+        function renderMap(zoomVal, lat, long) {
+
+            var mapOptions = {
+
+                zoom: zoomVal,
+                center: {
+                    lat: lat,
+                    lng: long
+                },
+                disableDefaultUI: true
+            };
+
+            map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+            map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+
+            var marker = new google.maps.Marker({
+                position: codeup,
+                map: map
+            });
+
+            infowindow.open(map, marker);
+
+        }
+
+        renderMap(zoomVal, lat, long);
+
+        zoomIn.addEventListener("click", function () {
+            map.setZoom(zoomVal += 1)
+        });
+        zoomOut.addEventListener("click", function () {
+            map.setZoom(zoomVal -= 1)
+        });
+
+
+        updateBtn.addEventListener("click", function () {
+
+            lat = parseFloat(document.getElementById("lat").value);
+            long = parseFloat(document.getElementById("long").value);
+
+            renderMap(zoomVal, lat, long);
+        });
+
+
+        findbtn.addEventListener('click', function () {
+            var address = document.getElementById('addressFind').value;
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({"address": address}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    map.setZoom(19);
+                }
+                console.log(results[0])
+            });
+        });
+
+
+    })();
+
+</script>
+</body>
+</html>
