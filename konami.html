@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <script src="js/jquery-2.x-git.js"></script>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+
+<script>
+    "use strict";
+
+    $(document).keyup(function (event) {
+        console.log(event.keyCode);
+
+
+        var kode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+        var i = 1
+        $(document).keydown(function (e) {
+            i = (e.keyCode === kode[i]);
+            if (i === kode.length) alert('you win')
+        });
+    });
+</script>
+
+</body>
+</html>
