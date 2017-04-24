@@ -9,11 +9,17 @@
             display: none;
         }
 
+        .colorMe {
+            background-color: #ff0;
+            display: block;
+        }
+
 
     </style>
 </head>
 <body>
 
+<h3>Yellowstone National Park</h3>
 
 <dl>
 
@@ -80,6 +86,28 @@
 </dl>
 
 <a href="#" id="reveal">Show Me</a>
+<h3>Great Smoky Mountains</h3>
+<ul>
+    <li>The Smoky Mountains National Park is the Salamander Capital of the World</li>
+    <li>The National Park Dates Back Over 200 Million Years</li>
+    <li class="colorMe">There’s Over 800 Miles of Trails in the Great Smoky Mountains National Park</li>
+</ul>
+<h3>Grand Canyon</h3>
+<ul>
+    <li>The Grand Canyon reveals 40% of Earths history.</li>
+    <li> The Grand Canyon encompasses several ecosystems.</li>
+    <li class="colorMe"> The Grand Canyon is the reason we have the FFA.</li>
+</ul>
+<h3>Yosemite</h3>
+<ul>
+    <li>A Scottish immigrant spearheaded Yosemite National Park’s creation.</li>
+    <li> Sheep were once among the primary threats to Yosemite’s natural landscape.</li>
+    <li class="colorMe">The buffalo soldiers who initially patrolled Yosemite pioneered the distinctive hat worn by
+        National Park
+        Service rangers.
+    </li>
+</ul>
+<button id="highlightMe">Click Me</button>
 
 <script>
 
@@ -90,13 +118,23 @@
         console.log("ready");
 
 
-        $("#reveal").click(function() {
+        $("#reveal").click(function () {
             $("dd").toggleClass("invisible");
         });
 
         $('dt').click(function () {
             $('dt').css('background-color', '#FF0')
+        });
+
+
+        $("ul").click(function () {
+            $(this).children().last().toggleClass('colorMe');
+        });
+
+        $('h3').click(function () {
+            $('li').parent().css('font-weight', 'bold')
         })
+
 
     });
 
