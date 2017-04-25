@@ -9,11 +9,6 @@
             display: none;
         }
 
-        .colorMe {
-            background-color: #ff0;
-            display: block;
-        }
-
 
     </style>
 </head>
@@ -123,18 +118,24 @@
         });
 
         $('dt').click(function () {
-            $('dt').css('background-color', '#FF0')
+            $(this).css('background-color', '#FF0')
         });
 
 
-        $("ul").click(function () {
-            $(this).children().last().toggleClass('colorMe');
+        $("#highlightMe").click(function () {
+            $('ul').each(function () {
+                $(this).children().last().css('background-color', '#ff0');
+            });
         });
+
 
         $('h3').click(function () {
-            $('li').parent().css('font-weight', 'bold')
-        })
+            $(this).next().css('font-weight', 'bold')
+        });
 
+        $('li').click(function () {
+            $(this).parent().children().first().css('color', 'blue')
+        })
 
     });
 
