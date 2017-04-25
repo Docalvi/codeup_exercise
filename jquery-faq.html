@@ -8,7 +8,9 @@
         .invisible {
             display: none;
         }
-
+        .hide   {
+            display: none;
+        }
 
     </style>
 </head>
@@ -131,14 +133,17 @@
             });
         });
 
+        $('h3').next().addClass('hide');
 
         $('h3').click(function () {
-            $(this).next().css('font-weight', 'bold')
+            $(this).next().removeClass('.hide');
+            $(this).next().css('font-weight', 'bold');
+            $(this).next().slideToggle()
         });
 
         $('li').click(function () {
             $(this).parent().children().first().css('color', 'blue')
-        })
+        });
 
         $('span').click(function () {
             $('div').hide()
