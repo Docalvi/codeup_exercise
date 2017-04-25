@@ -12,6 +12,7 @@
             display: none;
         }
 
+
     </style>
 </head>
 <body>
@@ -19,7 +20,7 @@
     <h1>Would you like to sign up for our newsletter? <span>X</span></h1>
 </div>
 
-<h2>Yellowstone National Park</h2>
+
 
 <dl>
 
@@ -79,11 +80,13 @@
     <dt>Does Yellowstone include a federally designated wilderness?</dt>
     <dd class="invisible">No. Most of the park was recommended for this designation in 1972, but Congress has not acted
         on the recommendation.
-
     </dd>
 
-
 </dl>
+
+
+<h2 id="register">Register to our newsletter.</h2>
+
 
 <a href="#" id="reveal">Show Me</a>
 <h3>Great Smoky Mountains</h3>
@@ -147,9 +150,9 @@
 
         $('span').click(function () {
             $('div').hide()
-        })
-
-
+        });
+        $('#register').hide();
+        $('#register').delay(8000).fadeIn(1500)
 
 
     });
