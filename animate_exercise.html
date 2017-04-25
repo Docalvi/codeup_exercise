@@ -28,6 +28,7 @@
     <button id="btn-hide">Hide It</button>
     <button id="btn-show">Show It</button>
     <button id="btn-all">Animate All</button>
+    <button id="reset">Reset</button>
 </p>
 
 <div id="animate-box"></div>
@@ -74,10 +75,11 @@
             $('#animate-box').animate({
                 opacity: '1'
             })
-
         });
-
-
+        // Added a reset function that puts the box into its original state
+        $('#reset').click(function () {
+            $('#animate-box').removeAttr('style')
+        });
 
     });
 </script>
