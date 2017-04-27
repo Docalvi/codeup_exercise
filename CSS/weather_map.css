@@ -1,0 +1,29 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    height:  350px;
+    width: 100%;
+    background-color: aquamarine;
+    margin: 0px;
+    padding: 0px;
+}
+
+#temp{
+    font-size: xx-large;
+
+}
+#weatherDescription{
+    font-size: 20px;
+}
+
+#infoContainers {
+    border-style: solid;
+    text-align: center;
+}
+
+
+
+

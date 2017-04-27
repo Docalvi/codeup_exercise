@@ -4,30 +4,68 @@
     <meta charset="UTF-8">
     <title>Weather Updates</title>
     <script src="js/jquery-2.x-git.js"></script>
+    <link rel="stylesheet" href="CSS/weather_map.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 
+<div></div>
+<div id="container">
+
+    <h1 id="weatherUpdate">Forecast Update</h1>
+    <div id="day1" class="weatherBox row"></div>
+
+</div>
+</div>
 
 <script>
 
     $(document).ready(function () {
 
 
-        $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
-            APPID: "3d40118cc10a26c5e20ae5c985670c7b",
-            lat:    29.423017,
-            lon:   -98.48527,
-            units: "imperial"
-        }).done(function(data) {
-            console.log(data);
+
+        function titleCase(str) {
+            str = str.toLowerCase().split(' ');
+            for (var i = 0; i < str.length; i++) {
+                str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+            }
+            return str.join(' ');
+        }
+
+        function loadWeather() {
+            $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+                APPID: "662f0d953cd87c3d54a9867a25d5157c",
+                lat: 29.423017,
+                lon: -98.48527,
+                units: "imperial"
+            }).done(function (data) {
+                console.log(data);
+                var content = "";
+                for (var i = 0; i < 3; i++) {
+
+                    content += '<div id="infoContainers" class="col-sm-4">';
+//                    content += '<p id="weatherDescription">'+titleCase(data.list[i].weather[0].description)+'</p>';
+                    content += '<p>'+   '<img src="http://openweathermap.org/img/w/[icon].png">' +  data.list[i].weather[0].icon +'</p>';
+                    content += '<p id="temp">' + parseInt(data.list[i].temp.max) + '/'+ parseInt(data.list[i].temp.min) + '</p>';
+                    content += '<p>' + 'Humidity:' + data.list[i].humidity + '</p>';
+                    content += '<p>' + 'Wind Speed:' + data.list[i].speed + '</p>';
+                    content += '<p>' + 'Pressure:' + data.list[i].pressure + '</p>' + '</div>';
+                }
+                $('#day1').html(content);
+            });
+
+
+        }
+        $("#weatherUpdate").click(function () {
+            $('#day1').html("");
+            loadWeather();
         });
 
-
-
+        loadWeather()
 
     });
-
-
 
 
 </script>
