@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Updates</title>
+    <script src="js/jquery-2.x-git.js"></script>
+</head>
+<body>
+
+
+<script>
+
+    $(document).ready(function () {
+
+
+        $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+            APPID: "3d40118cc10a26c5e20ae5c985670c7b",
+            lat:    29.423017,
+            lon:   -98.48527,
+            units: "imperial"
+        }).done(function(data) {
+            console.log(data);
+        });
+
+
+
+
+    });
+
+
+
+
+</script>
+</body>
+</html>
