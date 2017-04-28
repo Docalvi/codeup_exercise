@@ -20,8 +20,10 @@
     </div>
 
     <div id="map-canvas" class="row col-lg-12"></div>
-    <input type="text" id="addressFind">
-    <button id="find">Find</button>
+    <div>
+        <input type="text" id="addressFind">
+        <button id="find">Find</button>
+    </div>
 </div>
 
 <script>
@@ -68,9 +70,9 @@
 
 
         var mapOptions = {
-            zoom: 4,
-            minZoom: 4,
-            maxZoom: 4,
+            zoom: 5,
+            minZoom: 5,
+            maxZoom: 5,
             center: {
                 lat: 29.426791,
                 lng: -98.489602
@@ -93,12 +95,11 @@
                     map.setCenter(results[0].geometry.location);
                     map.setZoom(19);
                     marker.setPosition(results[0].geometry.location);
+                    loadWeather(marker.getPosition().lat(), marker.getPosition().lng())
                 }
                 console.log(results[0])
             });
         });
-
-
 
 
         var marker = new google.maps.Marker({
@@ -111,9 +112,6 @@
             console.log(marker.getPosition().lng());
             loadWeather(marker.getPosition().lat(), marker.getPosition().lng());
         });
-
-
-
 
 
     });
