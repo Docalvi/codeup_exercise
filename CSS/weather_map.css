@@ -22,8 +22,21 @@ body{
 #infoContainers {
     border-style: solid;
     text-align: center;
-}
 
+}
+#map-canvas{
+    height:500px;
+    width: 100%;
+}
+#weatherUpdate{
+    text-align: center;
+    font-size: 50px;
+}
+#cityName{
+
+    font-size: 30px;
+
+}
 
 
 
